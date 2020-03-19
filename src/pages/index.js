@@ -1,21 +1,47 @@
-import React from "react"
-import { Link } from "gatsby"
+// import React from "react"
+// import { graphql } from "gatsby"
+// import Layout from "../components/layout"
+// export const query = graphql`
+//   query HomePageQuery {
+//     allContentfulConclusion {
+//       edges {
+//         node {
+//           childContentfulConclusionDescriptionRichTextNode {
+//             description
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
+// const IndexPage = ({ data }) => (
+//   <Layout>
+//     {/* <h1>{data.site.siteMetadata.title}</h1> */}
+//     <p>{JSON.stringify(data)}</p>
+//   </Layout>
+// )
+// export default IndexPage
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import { createGlobalStyle } from 'styled-components';
+import React from 'react';
+import useStats from '../utils/useStats';
+import Stats from '../components/Stats';
+import CountrySelector from '../components/CountrySelector';
+import img from '../images/cdc.jpg';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+const GlobalStyle = createGlobalStyle`
+  html { 
+    font-family: nunito,roboto,proxima-nova,proxima nova,sans-serif;  
+    background-image: url(${img});
+  }
+`;
+
+export default function IndexPage() {
+  return (
+    <div>
+      <GlobalStyle />
+      <Stats url="https://covid19.mathdro.id/api"></Stats>
+      <CountrySelector></CountrySelector>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
-
-export default IndexPage
+  );
+}
