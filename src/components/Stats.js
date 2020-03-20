@@ -36,8 +36,8 @@ export default function Stats({ url }) {
   return (
     <StatGrid>
       <StatBlock>
-        <h2><span role="img" aria-label="virus">🦠 </span>
-        Confirmed:</h2>
+        <h4><span role="img" aria-label="virus">🦠 </span>
+        Confirmed:</h4>
         <span>{stats.confirmed.value}</span>
       </StatBlock>
       <StatBlock>
