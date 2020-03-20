@@ -36,7 +36,7 @@ export default function CountrySelector() {
               </Current>
           <Selection>
       <select
-        onChange={e => {
+        onBlur={e => {
           setSelectedCountry(e.target.value);
         }}
       >
