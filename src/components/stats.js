@@ -15,6 +15,12 @@ const StatGrid = styled.div`
   grid-gap: 1rem;
   color: white;
   font-family: nunito,roboto,proxima-nova,proxima nova,sans-serif;
+  @media (max-width: 375px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (max-width: 414px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 const StatBlock = styled.div`
   font-size: 2rem;
