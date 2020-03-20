@@ -26,7 +26,7 @@ import { createGlobalStyle } from 'styled-components';
 import React from 'react';
 import useStats from '../utils/useStats';
 import Stats from '../components/Stats';
-import CountrySelector from '../components/CountrySelector';
+import CountrySelector from '../components/СountrySelector';
 import img from '../images/cdc.jpg';
 
 const GlobalStyle = createGlobalStyle`
