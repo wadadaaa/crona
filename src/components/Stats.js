@@ -17,7 +17,7 @@ const StatGrid = styled.div`
   font-family: nunito,roboto,proxima-nova,proxima nova,sans-serif;
 `;
 const StatBlock = styled.div`
-  font-size: 3rem;
+  font-size: 2rem;
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 2rem;
@@ -36,8 +36,8 @@ export default function Stats({ url }) {
   return (
     <StatGrid>
       <StatBlock>
-        <h3><span role="img" aria-label="virus">🦠 </span>
-        Confirmed:</h3>
+        <h2><span role="img" aria-label="virus">🦠 </span>
+        Confirmed:</h2>
         <span>{stats.confirmed.value}</span>
       </StatBlock>
       <StatBlock>
